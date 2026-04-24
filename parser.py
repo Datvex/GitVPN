@@ -21,6 +21,8 @@ VALID_PREFIXES = (
 TIMEOUT = 1.5
 MAX_THREADS = 50
 
+FILTER_RUSSIA_BY_NAME=True
+
 
 # ---------- получаем ВСЕ txt файлы ----------
 def get_txt_files():
@@ -54,6 +56,21 @@ def download_file(filename):
     except:
         return ""
 
+# ---------- Проверка на русский сервер ----------
+def is_not_russia_by_name(config):
+    text = config.lower()
+
+    bad_keywords = [
+        "russia",
+        "moscow",
+        "ru",
+        "russian",
+        "россия",
+        "москва",
+        "🇷🇺"
+    ]
+
+    return not any(word in text for word in bad_keywords)
 
 # ---------- извлечение ----------
 def extract_configs(text):
@@ -64,6 +81,10 @@ def extract_configs(text):
 
         if not line or line.startswith("#"):
             continue
+        
+        if FILTER_RUSSIA_BY_NAME:
+            if not is_not_russia_by_name(line):
+                continue
 
         if line.startswith(VALID_PREFIXES):
             configs.append(line)
