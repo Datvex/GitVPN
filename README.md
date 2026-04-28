@@ -1,8 +1,9 @@
 # VPN Config Manager (GITVPN)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/static/v1?label=UI&message=Rich&color=555555&labelColor=0078D4&style=for-the-badge" alt="UI | Rich">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-F7DF1E?style=for-the-badge&logo=python&logoColor=black" alt="Python">
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/static/v1?label=UI&message=Rich&color=555555&labelColor=FF8C00&style=for-the-badge" alt="UI | Rich">
 </p>
 
 ---
@@ -11,10 +12,10 @@
 
 <p align="center">
   <a href="https://github.com/Squnplee">
-    <img src="https://img.shields.io/badge/Author-Squnplee-gray?style=for-the-badge&logo=github" alt="Squnplee">
+    <img src="https://img.shields.io/badge/Founder-Squnplee-FF4500?style=for-the-badge&logo=github&logoColor=white" alt="Squnplee">
   </a>
   <a href="https://github.com/Datvex">
-    <img src="https://img.shields.io/badge/Developer-Datvex-gray?style=for-the-badge&logo=github" alt="Datvex">
+    <img src="https://img.shields.io/badge/Developer-Datvex-FFD700?style=for-the-badge&logo=github&logoColor=black" alt="Datvex">
   </a>
 </p>
 
@@ -22,18 +23,18 @@
 
 ## Project Overview
 
-VPN Config Manager — специализированная утилита на языке Python, предназначенная для автоматизации процессов сбора, валидации и дистрибуции конфигураций VPN. Архитектура системы ориентирована на высокую производительность и отказоустойчивость при обработке массивов данных из распределенных источников.
+VPN Config Manager — специализированное программное решение на языке Python, предназначенное для автоматизации процессов агрегации, валидации и распределения конфигураций VPN. Архитектура системы оптимизирована для обеспечения высокой пропускной способности и стабильности при работе с распределенными источниками данных.
 
 ### Технические характеристики
-*   **Прямая инжекция данных:** Механизм получения данных через Raw-запросы к инфраструктуре GitHub, исключающий ограничения стандартного API.
-*   **Дифференцированная подписка:** Автоматическая сегментация конфигураций на стандартные узлы (`/sub`) и специализированные решения для обхода ограничений белых списков (`/white`).
-*   **Конкурентная валидация:** Многопоточный движок для проверки доступности узлов и измерения сетевых задержек в режиме реального времени.
-*   **Terminal User Interface (TUI):** Интерфейс командной строки на базе библиотеки Rich, обеспечивающий визуализацию процессов мониторинга и управления.
-*   **Параметрический контроль:** Возможность тонкой настройки лимитов узлов, гео-фильтрации и управления источниками данных через внутреннюю конфигурацию.
+*   **Прямая инжекция данных:** Реализован механизм получения данных через Raw-запросы к инфраструктуре GitHub, что исключает зависимость от лимитов стандартного API.
+*   **Дифференциация потоков данных:** Автоматическая сегментация конфигураций на стандартные узлы (`/sub`) и специализированные решения для обхода ограничений белых списков (`/white`).
+*   **Конкурентная валидация:** Многопоточный движок проверки сетевых задержек и доступности узлов в режиме реального времени.
+*   **Terminal User Interface (TUI):** Интерактивный интерфейс управления на базе библиотеки Rich, предназначенный для мониторинга системных процессов и оперативного управления параметрами.
+*   **Параметрический контроль:** Возможность детальной настройки лимитов, географической фильтрации и управления пулом источников через внутренние конфигурационные файлы.
 
 ## Installation
 
-1. Клонируйте репозиторий:
+1. Выполните клонирование репозитория:
 ```bash
 git clone https://github.com/Squnplee/GITVPN.git
 cd GITVPN
@@ -44,7 +45,7 @@ cd GITVPN
 pip install -r requirements.txt
 ```
 
-3. Выполните запуск приложения:
+3. Инициализируйте приложение:
 ```bash
 python main.py
 ```
