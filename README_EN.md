@@ -54,4 +54,4 @@
 | **Whitelists** | `/white` | Specialized configs for whitelist-based bypasses |
 
 ---
-*Read this in other languages: [Русский](README_RU.md)*
+*Read this in other languages: [Русский](README.md)*
