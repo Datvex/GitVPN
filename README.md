@@ -54,4 +54,4 @@
 | **Белые списки** | `/white` | Конфиги для обхода ограничений (White-list bypass) |
 
 ---
-*Read this in other languages: [English](README.md)*
+*Read this in other languages: [English](README_EN.md)*
