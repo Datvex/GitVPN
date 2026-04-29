@@ -32,8 +32,7 @@ GitVPN представляет собой специализированное 
 
 1. Выполните клонирование репозитория:
 ```bash
-git clone https://github.com/Squnplee/GITVPN.git
-cd GITVPN
+git clone https://github.com/Datvex/GitVPN
 ```
 
 2. Установите необходимые зависимости:
