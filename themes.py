@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
 THEMES = OrderedDict([
-    ("Claude", {"p": (205, 105, 75), "s": (236, 216, 196)}),
+    ("Claude", {"p": (217, 119, 87), "s": (24, 24, 24)}),
     ("Cyberpunk", {"p": (0, 255, 255), "s": (175, 0, 255)}),
     ("Ocean", {"p": (0, 255, 255), "s": (0, 0, 255)}),
     ("Sunset", {"p": (255, 255, 0), "s": (255, 0, 0)}),
