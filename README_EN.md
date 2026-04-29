@@ -1,14 +1,11 @@
-# 🌐 VPN Config Manager (GITVPN)
+# GitVPN
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-F7DF1E?style=for-the-badge&logo=python&logoColor=black" alt="Python">
-  <img src="https://img.shields.io/badge/UI-Sunset%20Gradient-orange?style=for-the-badge" alt="UI">
-  <img src="https://img.shields.io/badge/Status-Stable-green?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/static/v1?label=UI&message=Rich&color=555555&labelColor=FF8C00&style=for-the-badge" alt="UI | Rich">
 </p>
 
----
-
-## 👥 Authors
+## Authors
 
 <p align="center">
   <a href="https://github.com/Squnplee">
@@ -19,39 +16,33 @@
   </a>
 </p>
 
----
+## Project Description
 
-## 🇺🇸 English Description
+GitVPN is a professional Python-based software solution designed to automate the aggregation, validation, and distribution of VPN configurations. The system architecture is optimized to ensure high throughput and stability when interacting with distributed data sources.
 
-**VPN Config Manager** is a high-performance Python tool designed to aggregate, test, and serve VPN configurations. It focuses on extreme speed and reliability by utilizing direct data sources and multi-threaded latency testing.
+### Technical Features
 
-### ✨ Key Features
-*   **🚀 Zero API Usage:** Completely bypasses GitHub API rate limits. The script fetches data via direct Raw URLs for unlimited daily updates.
-*   **🛡️ Dual Subscriptions:** Smart separation into regular VPN configs (`/sub`) and specialized "Whitelists" (`/white`) for bypassing censorship.
-*   **⚡ Extreme Speed:** A multi-threaded checker validates hundreds of servers in seconds, keeping only the most reliable nodes.
-*   **🎨 Stunning UI:** A unique Terminal UI featuring "Sunset" style dynamic gradients for a premium look and feel.
-*   **⚙️ Total Control:** Adjust limits (up to 1000 nodes), filter Russian servers, and toggle 26+ sources directly from the settings menu.
+* **Direct Data Injection:** Implements a specialized mechanism for fetching data via raw requests to GitHub infrastructure, bypassing standard API rate limits and constraints.
+* **Data Stream Differentiation:** Automatically segments configurations into standard nodes (`/sub`) and specialized solutions optimized for bypassing whitelist restrictions (`/white`).
+* **Concurrent Validation:** Features a high-performance multi-threaded engine for real-time latency testing and node availability verification.
+* **Terminal User Interface (TUI):** Includes an interactive management dashboard powered by the Rich library, enabling real-time monitoring of system processes and rapid parameter adjustments.
+* **Parametric Control:** Provides granular configuration of limits, geographic filtering, and source pool management via internal configuration files.
 
-### 🛠 Installation
+## Installation
+
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Datvex/GitVPN
-   cd GITVPN
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the manager:
-   ```bash
-   python main.py
-   ```
+```bash
+git clone https://github.com/Datvex/GitVPN
+```
 
-### 📡 Subscription Endpoints
-| Type | Path | Description |
-| :--- | :--- | :--- |
-| **Regular VPN** | `/sub` | General list of tested high-speed servers |
-| **Whitelists** | `/white` | Specialized configs for whitelist-based bypasses |
+2. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
----
-*Read this in other languages: [Русский](README.md)*
+3. Initialize the application:
+```bash
+python main.py
+```
+
+*Read this in other languages: [Russian](README.md)*
