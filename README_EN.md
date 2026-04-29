@@ -35,7 +35,7 @@
 ### 🛠 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Squnplee/GITVPN.git
+   git clone https://github.com/Datvex/GitVPN
    cd GITVPN
    ```
 2. Install dependencies:
