@@ -1,10 +1,30 @@
-import requests
-import socket
-import time
+import requests, socket, time, os, sys, base64, json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
-import json
-import base64
+
+_counts = {}
+_ip_cache = {}
+
+def get_source_counts(): return _counts
+
+def update_counts_bg(sources):
+    def fetch(s):
+        try:
+            r = requests.get(s["url"], timeout=5).text
+            _counts[s["id"]] = len([l for l in r.splitlines() if "://" in l])
+        except: _counts[s["id"]] = 0
+    with ThreadPoolExecutor(max_workers=10) as ex:
+        for s in sources: ex.submit(fetch, s)
+
+def is_ip_ru(host):
+    if not host or host in _ip_cache: return _ip_cache.get(host, False)
+    try:
+        ip = socket.gethostbyname(host)
+        r = requests.get(f"http://ip-api.com/json/{ip}?fields=countryCode", timeout=2).json()
+        res = r.get("countryCode") == "RU"
+        _ip_cache[host] = res
+        return res
+    except: return False
 
 def parse_hp(c):
     try:
@@ -15,48 +35,38 @@ def parse_hp(c):
         return p.hostname, p.port
     except: return None, None
 
-def check_l(c, t):
+def check_l(c, t, f_ru):
     h, p = parse_hp(c)
-    if not h or not p: return None
+    if not h or not p or (f_ru and is_ip_ru(h)): return None
     try:
-        start = time.time()
-        with socket.create_connection((h, p), timeout=t):
-            return c, (time.time() - start) * 1000
+        with socket.create_connection((h, p), timeout=t): return c
     except: return None
 
-def is_ru(c):
-    return any(k in c.lower() for k in ["russia", "moscow", "ru", "россия", "москва", "🇷🇺"])
-
-def parse_and_check(cfg, progress_cb=None):
-    sources = [s for s in cfg["sources"] if s.get("enabled", True)]
-    t_out = cfg.get("ping_timeout", 1.5)
-    max_c = cfg.get("max_configs", 50)
-    
-    reg_pool, whi_pool = set(), set()
-    
-    for s in sources:
-        try:
-            if progress_cb: progress_cb(0, 0, f"Парсинг: {s['name']}")
-            r = requests.get(s["url"], timeout=10).text
-            for line in r.splitlines():
-                line = line.strip()
-                if not line or "://" not in line: continue
-                if cfg.get("filter_russia") and is_ru(line): continue
-                if s["type"] == "whitelist": whi_pool.add(line)
-                else: reg_pool.add(line)
-        except: continue
-
-    def process_pool(pool):
-        results = []
-        with ThreadPoolExecutor(max_workers=50) as ex:
-            futs = {ex.submit(check_l, c, t_out): c for c in pool}
-            for f in as_completed(futs):
-                res = f.result()
-                if res: results.append(res)
-        results.sort(key=lambda x: x[1])
-        return [r[0] for r in results][:max_c]
-
-    return process_pool(reg_pool), process_pool(whi_pool)
+def parse_and_check(cfg):
+    try:
+        sources = [s for s in cfg["sources"] if s.get("enabled", True)]
+        t_out, max_c, f_ru = cfg.get("ping_timeout", 1.5), cfg.get("max_configs", 50), cfg.get("filter_russia", True)
+        reg_pool, whi_pool = set(), set()
+        for s in sources:
+            try:
+                r = requests.get(s["url"], timeout=10).text
+                for line in r.splitlines():
+                    line = line.strip()
+                    if "://" not in line: continue
+                    if s["type"] == "whitelist": whi_pool.add(line)
+                    else: reg_pool.add(line)
+            except: continue
+        def process(pool):
+            res = []
+            with ThreadPoolExecutor(max_workers=50) as ex:
+                futs = [ex.submit(check_l, c, t_out, f_ru) for c in pool]
+                for f in as_completed(futs):
+                    r = f.result()
+                    if r: res.append(r)
+                    if len(res) >= max_c: break
+            return res[:max_c]
+        return process(reg_pool), process(whi_pool)
+    except: os._exit(0)
 
 def save_all(reg, whi):
     with open("all_configs.txt", "w", encoding="utf-8") as f: f.write("\n".join(reg))

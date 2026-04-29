@@ -39,20 +39,18 @@ DEFAULT_CONFIG = {
     "ping_timeout": 1.5,
     "sources": RAW_SOURCES,
     "server_port": 8000,
-    "server_host": "0.0.0.0"
+    "server_host": "0.0.0.0",
+    "theme": "Claude",
+    "lang": "English"
 }
 
 def load_config():
+    if not os.path.exists("configs"): os.makedirs("configs")
     if not os.path.exists(CONFIG_FILE):
-        os.makedirs(os.path.dirname(CONFIG_FILE), exist_ok=True)
         save_config(DEFAULT_CONFIG)
         return DEFAULT_CONFIG
     with open(CONFIG_FILE, "r", encoding="utf-8") as f:
-        cfg = json.load(f)
-    for src in RAW_SOURCES:
-        if not any(s["id"] == src["id"] for s in cfg["sources"]):
-            cfg["sources"].append(src)
-    return cfg
+        return json.load(f)
 
 def save_config(cfg):
     with open(CONFIG_FILE, "w", encoding="utf-8") as f:

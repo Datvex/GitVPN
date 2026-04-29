@@ -1,33 +1,13 @@
-THEMES = {
-    "Cyberpunk": {
-        "primary":   "#00ffff",
-        "secondary": "#af00ff",
-        "success":   "#00ff00",
-        "error":     "#ff0000",
-        "accent":    "#ffff00"
-    },
-    "Ocean": {
-        "primary":   "#00ffff",
-        "secondary": "#0000ff",
-        "success":   "#00ff00",
-        "error":     "#ff0000",
-        "accent":    "#ffffff"
-    },
-    "Sunset": {
-        "primary":   "#ffff00",
-        "secondary": "#ff0000",
-        "success":   "#00ff00",
-        "error":     "#ff4500",
-        "accent":    "#ffa500"
-    },
-    "Matrix": {
-        "primary":   "#00ff00",
-        "secondary": "#008000",
-        "success":   "#ffffff",
-        "error":     "#ff0000",
-        "accent":    "#00ff00"
-    }
-}
+from collections import OrderedDict
 
-def get_theme(name):
-    return THEMES.get(name, THEMES["Cyberpunk"])
+THEMES = OrderedDict([
+    ("Claude", {"p": (217, 119, 87), "s": (236, 230, 220)}),
+    ("Cyberpunk", {"p": (0, 255, 255), "s": (175, 0, 255)}),
+    ("Ocean", {"p": (0, 255, 255), "s": (0, 0, 255)}),
+    ("Sunset", {"p": (255, 255, 0), "s": (255, 0, 0)}),
+    ("Matrix", {"p": (0, 255, 0), "s": (0, 128, 0)}),
+    ("Gold", {"p": (255, 215, 0), "s": (255, 69, 0)})
+])
+
+def get_theme_list():
+    return list(THEMES.keys())
