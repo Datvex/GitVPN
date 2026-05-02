@@ -35,12 +35,17 @@ GitVPN is a professional Python-based software solution designed to automate the
 git clone https://github.com/Datvex/GitVPN
 ```
 
-2. Install the required dependencies:
+2. Navigate to the project directory:
+```bash
+cd GitVPN
+```
+
+3. Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Initialize the application:
+4. Initialize the application:
 ```bash
 python main.py
 ```
