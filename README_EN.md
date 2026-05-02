@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/static/v1?label=UI&message=Rich&color=555555&labelColor=FF8C00&style=for-the-badge" alt="UI | Rich">
 </p>
 
-## Авторы
+## Authors
 
 <p align="center">
   <a href="https://github.com/Squnplee">
@@ -16,40 +16,40 @@
   </a>
 </p>
 
-## О проекте
+## About
 
-GitVPN — инструмент на Python для сбора, проверки и раздачи VPN-конфигураций. Забирает данные напрямую через GitHub Raw, без ограничений стандартного API.
+GitVPN is a Python tool for collecting, validating and distributing VPN configurations. It fetches data directly via GitHub Raw, bypassing standard API rate limits.
 
-## Возможности
+## Features
 
-**Два типа конфигураций** — обычные узлы через `/sub` и конфигурации для обхода белых списков через `/white`.
+**Two configuration types** — standard nodes via `/sub` and configurations for bypassing whitelist restrictions via `/white`.
 
-**Проверка узлов** — многопоточная проверка пинга и доступности в реальном времени.
+**Node validation** — multi-threaded latency and availability checks in real time.
 
-**Терминальный интерфейс** — управление и мониторинг через TUI на базе библиотеки Rich.
+**Terminal interface** — management and monitoring via TUI powered by the Rich library.
 
-**Гибкая настройка** — лимиты, фильтрация по странам и управление источниками через конфиги.
+**Flexible configuration** — limits, country filtering and source pool management via config files.
 
-## Установка
+## Installation
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 ```bash
 git clone https://github.com/Datvex/GitVPN
 ```
 
-2. Перейдите в директорию проекта:
+2. Navigate to the project directory:
 ```bash
 cd GitVPN
 ```
 
-3. Установите зависимости:
+3. Install the dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Запустите приложение:
+4. Run the application:
 ```bash
 python main.py
 ```
 
-*Read this in other languages: [English](README_EN.md)*
+*Read this in other languages: [Russian](README.md)*
