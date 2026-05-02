@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/static/v1?label=UI&message=Rich&color=555555&labelColor=FF8C00&style=for-the-badge" alt="UI | Rich">
 </p>
 
-## Authors
+## Авторы
 
 <p align="center">
   <a href="https://github.com/Squnplee">
@@ -16,38 +16,40 @@
   </a>
 </p>
 
-## Project Description
+## О проекте
 
-GitVPN is a professional Python-based software solution designed to automate the aggregation, validation, and distribution of VPN configurations. The system architecture is optimized to ensure high throughput and stability when interacting with distributed data sources.
+GitVPN — инструмент на Python для сбора, проверки и раздачи VPN-конфигураций. Забирает данные напрямую через GitHub Raw, без ограничений стандартного API.
 
-### Technical Features
+## Возможности
 
-* **Direct Data Injection:** Implements a specialized mechanism for fetching data via raw requests to GitHub infrastructure, bypassing standard API rate limits and constraints.
-* **Data Stream Differentiation:** Automatically segments configurations into standard nodes (`/sub`) and specialized solutions optimized for bypassing whitelist restrictions (`/white`).
-* **Concurrent Validation:** Features a high-performance multi-threaded engine for real-time latency testing and node availability verification.
-* **Terminal User Interface (TUI):** Includes an interactive management dashboard powered by the Rich library, enabling real-time monitoring of system processes and rapid parameter adjustments.
-* **Parametric Control:** Provides granular configuration of limits, geographic filtering, and source pool management via internal configuration files.
+**Два типа конфигураций** — обычные узлы через `/sub` и конфигурации для обхода белых списков через `/white`.
 
-## Installation
+**Проверка узлов** — многопоточная проверка пинга и доступности в реальном времени.
 
-1. Clone the repository:
+**Терминальный интерфейс** — управление и мониторинг через TUI на базе библиотеки Rich.
+
+**Гибкая настройка** — лимиты, фильтрация по странам и управление источниками через конфиги.
+
+## Установка
+
+1. Клонируйте репозиторий:
 ```bash
 git clone https://github.com/Datvex/GitVPN
 ```
 
-2. Navigate to the project directory:
+2. Перейдите в директорию проекта:
 ```bash
 cd GitVPN
 ```
 
-3. Install the required dependencies:
+3. Установите зависимости:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Initialize the application:
+4. Запустите приложение:
 ```bash
 python main.py
 ```
 
-*Read this in other languages: [Russian](README.md)*
+*Read this in other languages: [English](README_EN.md)*
