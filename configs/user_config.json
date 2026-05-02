@@ -1,92 +1,203 @@
 {
   "filter_russia": true,
-  "max_configs": 50,
+  "max_configs": 150,
+  "smart_filter": false,
+  "test_type": "TCP Ping",
   "parse_interval": 60,
   "ping_timeout": 1.5,
   "sources": [
     {
       "id": 1,
-      "name": "igareck/vpn-configs-for-russia",
-      "owner_repo": "igareck/vpn-configs-for-russia",
-      "branch": "main",
+      "name": "igareck/VLESS_mobile",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt",
+      "type": "regular",
       "enabled": true
     },
     {
       "id": 2,
-      "name": "AvenCores/goida-vpn-configs",
-      "owner_repo": "AvenCores/goida-vpn-configs",
-      "branch": "main",
+      "name": "igareck/VLESS_full",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt",
+      "type": "regular",
       "enabled": true
     },
     {
       "id": 3,
-      "name": "mahdibland/V2RayAggregator",
-      "owner_repo": "mahdibland/V2RayAggregator",
-      "branch": "master",
+      "name": "igareck/SS_All",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt",
+      "type": "regular",
       "enabled": true
     },
     {
       "id": 4,
-      "name": "barry-far/V2ray-Config",
-      "owner_repo": "barry-far/V2ray-Config",
-      "branch": "main",
+      "name": "igareck/WHITE_Reality_1",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile.txt",
+      "type": "whitelist",
       "enabled": true
     },
     {
       "id": 5,
-      "name": "MatinGhanbari/v2ray-configs",
-      "owner_repo": "MatinGhanbari/v2ray-configs",
-      "branch": "main",
+      "name": "igareck/WHITE_Reality_2",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile-2.txt",
+      "type": "whitelist",
       "enabled": true
     },
     {
       "id": 6,
-      "name": "Epodonios/v2ray-configs",
-      "owner_repo": "Epodonios/v2ray-configs",
-      "branch": "main",
+      "name": "igareck/WHITE_CIDR_All",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+      "type": "whitelist",
       "enabled": true
     },
     {
       "id": 7,
-      "name": "ebrasha/free-v2ray-public-list",
-      "owner_repo": "ebrasha/free-v2ray-public-list",
-      "branch": "main",
+      "name": "igareck/WHITE_CIDR_Checked",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt",
+      "type": "whitelist",
       "enabled": true
     },
     {
       "id": 8,
-      "name": "ermaozi/get_subscribe",
-      "owner_repo": "ermaozi/get_subscribe",
-      "branch": "master",
+      "name": "igareck/WHITE_SNI_All",
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
+      "type": "whitelist",
       "enabled": true
     },
     {
       "id": 9,
-      "name": "NiREvil/vless",
-      "owner_repo": "NiREvil/vless",
-      "branch": "main",
+      "name": "AvenCores/mirror_4",
+      "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/4.txt",
+      "type": "regular",
       "enabled": true
     },
     {
       "id": 10,
-      "name": "anaer/Sub",
-      "owner_repo": "anaer/Sub",
-      "branch": "main",
+      "name": "AvenCores/mirror_22",
+      "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/22.txt",
+      "type": "regular",
       "enabled": true
+    },
+    {
+      "id": 11,
+      "name": "AvenCores/mirror_26",
+      "url": "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/26.txt",
+      "type": "whitelist",
+      "enabled": true
+    },
+    {
+      "id": 12,
+      "name": "Barry/Sub1",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 13,
+      "name": "Barry/Sub2",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 14,
+      "name": "Barry/Sub3",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub3.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 15,
+      "name": "Barry/Sub4",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub4.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 16,
+      "name": "Barry/Sub5",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub5.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 17,
+      "name": "Barry/Sub6",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub6.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 18,
+      "name": "Barry/Sub7",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub7.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 19,
+      "name": "Barry/Sub8",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub8.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 20,
+      "name": "Ebrasha/All",
+      "url": "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 21,
+      "name": "Ebrasha/Vless",
+      "url": "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vless_configs.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 22,
+      "name": "Ebrasha/Vmess",
+      "url": "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vmess_configs.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 23,
+      "name": "Ebrasha/Config",
+      "url": "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 24,
+      "name": "Barry/Proto_Vmess",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 25,
+      "name": "Barry/Proto_Vless",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt",
+      "type": "regular",
+      "enabled": false
+    },
+    {
+      "id": 26,
+      "name": "Barry/Proto_SS",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt",
+      "type": "regular",
+      "enabled": false
     }
   ],
   "server_port": 8000,
-  "server_host": "0.0.0.0",
+  "server_host": "127.0.0.1",
+  "server_token": "18022038cd33a2d3",
   "theme": "Claude",
   "lang": "Russian",
   "filters": {
-    "_comment": "Правила фильтрации конфигов",
     "filter_by_name": {
-      "_comment": "Фильтрация по тексту внутри строки конфига (имя узла, страна и т.д.)",
       "enabled": true,
-      "_comment_enabled": "Включить фильтрацию по имени/тексту.",
       "mode": "blacklist",
-      "_comment_mode": "Режим: 'blacklist' — исключить если содержит слова из списка. 'whitelist' — включать ТОЛЬКО если содержит.",
       "blacklist": [
         "russia",
         "moscow",
@@ -96,136 +207,8 @@
         "москва",
         "🇷🇺"
       ],
-      "_comment_blacklist": "Список слов/фраз для исключения (нижний регистр). Работает только при mode='blacklist'.",
       "whitelist": [],
-      "_comment_whitelist": "Список слов/фраз для включения. Работает только при mode='whitelist'. Пример: ['nl', 'de', 'us', 'germany']",
-      "case_sensitive": false,
-      "_comment_case_sensitive": "Если false — поиск без учёта регистра."
-    },
-    "filter_by_port": {
-      "_comment": "Фильтрация по номеру порта",
-      "enabled": false,
-      "allowed_ports": [],
-      "_comment_allowed_ports": "Разрешённые порты. Пустой список = все порты. Пример: [443, 8443, 80]",
-      "blocked_ports": [],
-      "_comment_blocked_ports": "Запрещённые порты. Пример: [22, 3389]"
-    },
-    "filter_by_host": {
-      "_comment": "Фильтрация по хосту/IP",
-      "enabled": false,
-      "block_private_ips": true,
-      "_comment_block_private_ips": "Блокировать приватные IP (192.168.x.x, 10.x.x.x, 172.16-31.x.x)",
-      "block_localhost": true,
-      "_comment_block_localhost": "Блокировать 127.x.x.x и localhost.",
-      "allowed_domains": [],
-      "_comment_allowed_domains": "Разрешить только конкретные домены. Пустой = без ограничений.",
-      "blocked_domains": [],
-      "_comment_blocked_domains": "Заблокировать конкретные домены."
-    },
-    "max_configs_per_file": 0,
-    "_comment_max_configs_per_file": "Максимум конфигов из одного файла. 0 = без лимита.",
-    "max_total_configs": 0,
-    "_comment_max_total_configs": "Максимум конфигов всего (до проверки). 0 = без лимита."
-  },
-  "_comment": "=============================================================",
-  "_comment_1": "  VPN Config Manager — файл конфигурации",
-  "_comment_2": "  Все поля с '_comment' — это документация, не трогай их.",
-  "_comment_3": "  Создавай копии этого файла под свои нужды.",
-  "_comment_4": "=============================================================",
-  "profile": {
-    "_comment": "Мета-информация профиля — только для удобства",
-    "name": "Default",
-    "description": "Стандартный профиль. Парсит репозиторий igareck, фильтрует RU-серверы.",
-    "author": "",
-    "created": "2025-01-01"
-  },
-  "source": {
-    "_comment": "Источник конфигов — откуда качать",
-    "repo_api": "https://api.github.com/repos/igareck/vpn-configs-for-russia/contents/",
-    "_comment_repo_api": "GitHub Contents API репозитория. Используется для получения списка файлов.",
-    "base_raw": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/",
-    "_comment_base_raw": "Базовый URL для скачивания сырых файлов. Добавляется имя файла.",
-    "file_extension": ".txt",
-    "_comment_file_extension": "Расширение файлов которые будут скачиваться из репозитория.",
-    "extra_urls": [],
-    "_comment_extra_urls": "Дополнительные прямые URL до .txt файлов с конфигами (любые источники). Пример: ['https://example.com/configs.txt']",
-    "github_token": "",
-    "_comment_github_token": "Опционально: GitHub Personal Access Token для обхода rate limit (60 -> 5000 запросов/час). Оставь пустым если не нужен."
-  },
-  "output": {
-    "_comment": "Куда сохранять результат",
-    "file": "all_configs.txt",
-    "_comment_file": "Путь к выходному файлу с рабочими конфигами. Будет перезаписан при каждом запуске.",
-    "append_mode": false,
-    "_comment_append_mode": "Если true — добавляет конфиги к существующему файлу вместо перезаписи.",
-    "deduplicate": true,
-    "_comment_deduplicate": "Если true — убирает дублирующиеся конфиги перед проверкой и сохранением.",
-    "sort_output": false,
-    "_comment_sort_output": "Если true — сортирует конфиги алфавитно перед записью.",
-    "backup_previous": false,
-    "_comment_backup_previous": "Если true — перед перезаписью создаёт backup: all_configs.txt -> all_configs.txt.bak"
-  },
-  "protocols": {
-    "_comment": "Какие протоколы VPN включать в результат",
-    "vless": true,
-    "vmess": true,
-    "trojan": true,
-    "ss": true,
-    "ssr": true,
-    "_comment_note": "Поставь false чтобы полностью исключить протокол из парсинга и проверки."
-  },
-  "checker": {
-    "_comment": "Настройки проверки доступности серверов",
-    "enabled": true,
-    "_comment_enabled": "Если false — пропустить проверку, сохранить всё без теста.",
-    "timeout": 1.5,
-    "_comment_timeout": "Таймаут TCP-соединения в секундах. Меньше = быстрее, но больше ложных отказов.",
-    "max_threads": 50,
-    "_comment_max_threads": "Число параллельных потоков проверки. Больше = быстрее, но нагрузка на сеть.",
-    "retries": 1,
-    "_comment_retries": "Число попыток при неудаче. 1 = без повторов.",
-    "retry_delay": 0.5,
-    "_comment_retry_delay": "Задержка между повторными попытками в секундах.",
-    "progress_update_every": 50,
-    "_comment_progress_update_every": "Обновлять статистику каждые N проверенных конфигов."
-  },
-  "server": {
-    "_comment": "Настройки встроенного HTTP-сервера подписки",
-    "port": 8000,
-    "_comment_port": "Порт на котором поднимается сервер.",
-    "host": "0.0.0.0",
-    "_comment_host": "Адрес для прослушивания. '0.0.0.0' = доступен со всех интерфейсов, '127.0.0.1' = только локально.",
-    "path": "/sub",
-    "_comment_path": "URL-путь для subscription endpoint. Итоговый URL: http://HOST:PORT/PATH",
-    "encoding": "base64",
-    "_comment_encoding": "Формат ответа сервера. 'base64' — стандарт для большинства клиентов (v2rayNG, Clash и др.).",
-    "config_file": "all_configs.txt",
-    "_comment_config_file": "Файл из которого сервер раздаёт конфиги. Обычно = output.file.",
-    "auto_reload": true,
-    "_comment_auto_reload": "Если true — перечитывает файл при каждом запросе (актуально при регулярном парсинге).",
-    "cors_enabled": false,
-    "_comment_cors_enabled": "Разрешить CORS-заголовки (нужно если обращаешься из браузера/веб-клиента).",
-    "access_log": false,
-    "_comment_access_log": "Выводить лог каждого HTTP-запроса к серверу."
-  },
-  "scheduler": {
-    "_comment": "Автоматический запуск парсера по расписанию",
-    "enabled": false,
-    "_comment_enabled": "Включить автозапуск. При старте TUI парсер будет запускаться автоматически.",
-    "interval_minutes": 60,
-    "_comment_interval_minutes": "Интервал между запусками в минутах.",
-    "run_on_start": false,
-    "_comment_run_on_start": "Запустить парсер сразу при открытии TUI."
-  },
-  "ui": {
-    "_comment": "Настройки интерфейса TUI",
-    "theme": "dark",
-    "_comment_theme": "Тема: 'dark' или 'light'.",
-    "log_max_lines": 500,
-    "_comment_log_lines": "Максимум строк в логе перед очисткой старых.",
-    "show_failed_configs": false,
-    "_comment_show_failed": "Показывать в логе конфиги которые не прошли проверку.",
-    "compact_mode": false,
-    "_comment_compact": "Более компактный интерфейс (меньше отступов)."
+      "case_sensitive": false
+    }
   }
 }
