@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  🌐 <a href="README.md"><b>🇷🇺 俄语</b></a> | <a href="README_EN.md"><b>🇬 英语</b></a> | <b>🇨🇳 简体中文</b>
+  🌐 <a href="README.md"><b>🇷🇺 俄语</b></a> | <a href="README_EN.md"><b>🇬🇧 英语</b></a> | <b>🇨🇳 简体中文</b>
 </p>
 
 ## 作者
